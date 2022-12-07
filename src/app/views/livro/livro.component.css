@@ -1,0 +1,10 @@
+.item-lista{
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .fab-add{
+    position: fixed;
+    bottom: 32px;
+    right: 32px;
+  }

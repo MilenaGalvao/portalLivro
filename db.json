@@ -1,0 +1,35 @@
+{
+  "posts": [
+    {
+      "id": 4,
+      "author": "Milena Galvao",
+      "title": "Portal de livros!"
+    }
+  ],
+  "livro": [
+    {
+      "id": 1,
+      "nome": "Harry Potter",
+      "autor": "abc"
+    },
+    {
+      "id": 2,
+      "nome": "Senhor dos anéis",
+      "autor": "def"
+    },
+    {
+      "id": 3,
+      "nome": "Pequeno Principe",
+      "autor": "ghi"
+    },
+    {
+      "id": 5,
+      "nome": "Livro.1",
+      "autor": "Milena Galvão"
+    }
+  ],
+  "comments": [],
+  "profile": {
+    "name": "typicode"
+  }
+}
