@@ -7,7 +7,6 @@ import { Livro } from '../model/livro';
   providedIn: 'root'
 })
 export class LivroService {
-  [x: string]: any;
 
   constructor( private http: HttpClient) { }
 

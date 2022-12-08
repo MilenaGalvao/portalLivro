@@ -1,7 +1,7 @@
 <h2>Portal de Livros</h2>
 
 <mat-selection-list [multiple]="false">
-  <mat-list-option *ngFor="let livro of Listalivros">
+  <mat-list-option *ngFor="let livro of livros">
     <div class="item-lista">
    <span (click)="selecionar(livro)"> {{livro.nome}} - {{livro.autor}}</span>
     <button mat-icon-button collor="accent" (click)="excluir(livro.id)">
@@ -17,7 +17,7 @@
   <mat-icon>add</mat-icon>
 </button>
 
-<div *ngIf="livro">
+<div *ngIf="livros">
   <mat-form-field style="width: 100%">
     <mat-label>Nome</mat-label>
   <input type="text" [(ngModel)]="livro.nome" matInput>

@@ -12,6 +12,7 @@ export class LivroComponent {
   livros: Livro[] = []
   livroInserir?: Livro;
   estaEditando = false;
+  livro: any;
 
   constructor(private livroService: LivroService) { }
 
@@ -66,7 +67,7 @@ export class LivroComponent {
   }
 
 selecionar(livro: Livro) {
-  this.livroInserir = livro;
+  this.livro = livro;
   this.estaEditando = true;
 
 }

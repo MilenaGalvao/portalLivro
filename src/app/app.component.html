@@ -1,8 +1,24 @@
-    <h1>Portal de Livros</h1>
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <button mat-icon-button (click)="sidenav.toggle()">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <h1>Portal de livros</h1>
+  </mat-toolbar-row>
+</mat-toolbar>
 
+<mat-sidenav-container>
+  <mat-sidenav mode="side" #sidenav [opened]="true">
+    <mat-list>
       <a routerLink="/livro" mat-list-item>
-        Livros
+        livros
       </a>
+    </mat-list>
+  </mat-sidenav>
 
+  <mat-sidenav-content style="min-height: calc(100vh - 64px)">
+    <mat-card class="mat-elevation-z2 cartao">
     <router-outlet></router-outlet>
-  
+  </mat-card>
+  </mat-sidenav-content>
+</mat-sidenav-container>
