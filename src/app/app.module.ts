@@ -15,7 +15,7 @@ import { MatListModule } from '@angular/material/list';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import {MatInputModule} from '@angular/material/input';
+import { MatInputModule } from '@angular/material/input';
 
 @NgModule({
   declarations: [
@@ -29,7 +29,7 @@ import {MatInputModule} from '@angular/material/input';
     FormsModule,
     RouterModule,
     BrowserAnimationsModule,
-    
+
     MatToolbarModule,
     MatButtonModule,
     MatIconModule,

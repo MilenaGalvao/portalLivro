@@ -3,11 +3,11 @@
 <mat-selection-list [multiple]="false">
   <mat-list-option *ngFor="let livro of livros">
     <div class="item-lista">
-   <span (click)="selecionar(livro)"> {{livro.nome}} - {{livro.autor}}</span>
-    <button mat-icon-button collor="accent" (click)="excluir(livro.id)">
-      <mat-icon>delete</mat-icon>
-    </button>
-  </div>
+      <span (click)="selecionar(livro)"> {{livro.nome}} - {{livro.autor}} - {{livro.genero}}</span>
+      <button mat-icon-button collor="accent" (click)="excluir(livro.id)">
+        <mat-icon>delete</mat-icon>
+      </button>
+    </div>
   </mat-list-option>
 </mat-selection-list>
 
@@ -17,21 +17,24 @@
   <mat-icon>add</mat-icon>
 </button>
 
-<div *ngIf="livros">
+<div *ngIf="livro">
   <mat-form-field style="width: 100%">
     <mat-label>Nome</mat-label>
-  <input type="text" [(ngModel)]="livro.nome" matInput>
-</mat-form-field>
+    <input type="text" [(ngModel)]="livro.nome" matInput>
+  </mat-form-field>
 
-<mat-form-field style="width: 100%">
-  <mat-label>Autor</mat-label>
-  <input type="text" [(ngModel)]="livro.autor" matInput>
-</mat-form-field>
+  <mat-form-field style="width: 100%">
+    <mat-label>Autor</mat-label>
+    <input type="text" [(ngModel)]="livro.autor" matInput>
+  </mat-form-field>
 
-<br><br>
-<button mat-raised-button (click)="cancelar()"> Cancelar</button>
-<button color="primary" style="margin-left: 20px" mat-raised-button (click)="salvar()">Salvar</button>
+  <mat-form-field style="width: 100%">
+    <mat-label>Gênero</mat-label>
+    <input type="text" [(ngModel)]="livro.genero" matInput>
+  </mat-form-field>
+
+
+  <br><br>
+  <button mat-raised-button (click)="cancelar()"> Cancelar</button>
+  <button color="primary" style="margin-left: 20px" mat-raised-button (click)="salvar()">Salvar</button>
 </div>
-
- 
- 

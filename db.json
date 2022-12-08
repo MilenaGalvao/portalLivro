@@ -9,28 +9,24 @@
   "livro": [
     {
       "id": 1,
-      "nome": "Harry Potter",
-      "autor": "abc"
+      "nome": "Harry Potter e a Pedra Filosofal",
+      "autor": "J.K. Rowling"
     },
     {
       "id": 2,
       "nome": "Senhor dos anéis",
-      "autor": "def"
+      "autor": "J.R.R. Tolkien"
     },
     {
       "id": 3,
-      "nome": "Pequeno Principe",
-      "autor": "ghi"
+      "nome": "O Pequeno Príncipe",
+      "autor": "Antoine de Saint-Exupéry"
     },
     {
-      "nome": "Livro.1.2.3",
-      "autor": "Milena Galvão",
-      "id": 6
-    },
-    {
-      "nome": "",
-      "autor": "",
-      "id": 7
+      "nome": "O Exorcista",
+      "autor": "William Peter Blatty",
+      "genero": "Terror",
+      "id": 4
     }
   ],
   "comments": [],

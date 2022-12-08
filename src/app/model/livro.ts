@@ -5,5 +5,7 @@ export class Livro {
     nome = ''; 
   
     autor = ''; 
+
+    genero = '';
   
    } 

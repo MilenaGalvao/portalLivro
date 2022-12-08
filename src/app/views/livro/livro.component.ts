@@ -16,60 +16,60 @@ export class LivroComponent {
 
   constructor(private livroService: LivroService) { }
 
-  ngOnInit(): void{
+  ngOnInit(): void {
     this.listar();
   }
 
-  listar () {
+  listar() {
     this.livroService.listar().subscribe(livros => {
       this.livros = livros;
     });
   }
 
-  novo () {
+  novo() {
     this.livroInserir = new Livro();
   }
 
-  cancelar () {
+  cancelar() {
     this.livroInserir = undefined;
   }
 
-  salvar () {
-    if(!this.livroInserir){
+  salvar() {
+    if (!this.livroInserir) {
       return;
     }
-    if (!this.estaEditando){
-    this.livroService.inserir(this.livroInserir).subscribe(livro => {
-      this.listar();
-      this.cancelar();
-    });
-  }
-  else {
-    this.livroService.atualizar(this.livroInserir).subscribe(livro => {
-      this.listar();
-      this.cancelar();
-    });
+    if (!this.estaEditando) {
+      this.livroService.inserir(this.livroInserir).subscribe(livro => {
+        this.listar();
+        this.cancelar();
+      });
+    }
+    else {
+      this.livroService.atualizar(this.livroInserir).subscribe(livro => {
+        this.listar();
+        this.cancelar();
+      });
     }
   }
 
-  excluir(id?: number) { 
-    if (!id){
+  excluir(id?: number) {
+    if (!id) {
       return
     }
 
-    const resposta = confirm('Esse livro será excluido. OK ?'); 
+    const resposta = confirm('Esse livro será excluido. OK ?');
 
-    if (resposta) { 
-      this.livroService.excluir(id).subscribe(() => { 
-          this.listar(); 
-      }); 
-}
+    if (resposta) {
+      this.livroService.excluir(id).subscribe(() => {
+        this.listar();
+      });
+    }
   }
 
-selecionar(livro: Livro) {
-  this.livro = livro;
-  this.estaEditando = true;
+  selecionar(livro: Livro) {
+    this.livro = livro;
+    this.estaEditando = true;
 
-}
+  }
 }
 
